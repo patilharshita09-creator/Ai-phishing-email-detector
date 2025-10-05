@@ -76,8 +76,8 @@ The project aims to provide a user-friendly tool to test phishing detection and 
 ## Screenshots
 
 ![AI Phishing Detector Screenshot](https://github.com/patilharshita09-creator/Ai-phishing-email-detector/blob/main/AI%20SS.png?raw=true)
-![AI Phishing Detector Screenshot]()
-![AI Phishing Detector Screenshot]()
+![AI Phishing Detector Screenshot](https://github.com/patilharshita09-creator/Ai-phishing-email-detector/blob/main/email%20ss.png?raw=true)
+![AI Phishing Detector Screenshot](https://github.com/patilharshita09-creator/Ai-phishing-email-detector/blob/main/detection%20ss.png?raw=true)
 ---
 
 ## Author
