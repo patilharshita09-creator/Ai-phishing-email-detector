@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Phishing Email Detector</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+      body { background-color: #f8f9fa; }
+      .container { 
+        max-width: 800px; 
+        margin-top: 50px; 
+        padding: 30px; 
+        background-color: white; 
+        border-radius: 15px; 
+        box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+      }
+      textarea { resize: none; }
+      .btn-check-email { background-color: #007bff; color: white; }
+      .result { margin-top: 20px; padding: 15px; border-radius: 10px; font-weight: bold; }
+      .phishing { background-color: #f8d7da; color: #721c24; }
+      .safe { background-color: #d4edda; color: #155724; }
+    </style>
+  </head>
+  
+  <body>
+    <div class="container">
+      <h2 class="text-center mb-4">AI Phishing Email Detector</h2>
+      
+      <form method="post">
+        <textarea name="email_text" rows="8" class="form-control mb-3" placeholder="Paste your email here..."></textarea>
+        <button type="submit" class="btn btn-check-email w-100">Check Email</button>
+      </form>
+
+      {% if result %}
+        <div class="result mt-3 {% if result == 'Phishing ⚠️' %}phishing{% else %}safe{% endif %}">
+          Result: {{ result }}
+          {% if prob %} | Confidence: {{ (prob*100)|round(2) }}%{% endif %}
+        </div>
+      {% endif %}
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
